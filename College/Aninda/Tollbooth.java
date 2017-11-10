@@ -54,8 +54,8 @@ class Tollbooth{
 	
 				}
 			i++;
-			}
 		}
+	}
 }
 		
 		
