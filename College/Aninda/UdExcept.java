@@ -1,0 +1,27 @@
+import java.lang.*;
+import java.util.*;
+class OurException extends Exception{
+	OurException(){
+		System.out.println("Error");
+		}
+	OurException(int x){
+		System.out.println("Error"+x);
+		}
+}
+class UdExcept{
+	public static void main(String []args)throws OurException{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int a=sc.nextInt();
+		try{
+			if(a<0)
+				throw new OurException();
+			if(a>10&&a<20)
+				throw new OurException(1000);
+		}
+		catch(OurException e){
+			System.out.println(e);
+		}
+	}
+}
+
